@@ -1,0 +1,87 @@
+<html>
+<style>
+  body {
+    background-color: #c9d8ff;
+    margin: 250px;
+  }
+
+  h1 {
+    color: DarkBlue;
+  }
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+</style>
+<head>
+  <link rel="icon" type="image/x-icon" href="bahai-solid.svg">
+  <title>Biography</title>
+</head>
+
+<body>
+  <img src="p.jpg" alt="photo" style="width:200px;height:200px;float:right">
+  <h1>Biography</h1>
+  <h2>周君桓</h2>
+  <h3>
+    <p>School</p>
+    <ul>
+      <li class="In">
+        <p>high school:
+          <a href="https://www2.ck.tp.edu.tw/" target="blank_">
+            臺北市立建國高級中學
+          </a>
+        </p>
+      </li>
+      <li class="In">
+        <p>department:
+          <a href="https://web.ee.ntu.edu.tw/" target="blank_">
+            台大電機系
+          </a>
+        </p>
+      </li>
+    </ul>
+  </h3>
+  <h3>
+    <p>Hobbies</p>
+    <ul>
+      <li class="In"><a href="https://en.wikipedia.org/wiki/Drawing" target="blank_">
+          drawing
+        </a></li>
+      <li class="In"><a href="https://photographylife.com/what-is-photography" target="blank_">
+          photography
+        </a></li>
+      <li class="In"><a href="https://zh.wikipedia.org/zh-tw/%E7%BE%BD%E6%AF%9B%E7%90%83" target="blank_">
+          badminton
+        </a></li>
+    </ul>
+    <p>background music</p>
+    <audio loop="loop" autoplay="autoplay" controls="controls">
+      <source src="bensound-acousticbreeze.mp3">
+    </audio><br>
+  </h3>
+  <span id="Clock"></span>
+
+</body>
+<script>
+  setInterval(displayTime, 1000);
+
+  function displayTime() {
+    var currentTime = new Date();
+
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var day = currentTime.getDate();
+    var months = currentTime.getMonth();
+    var year = currentTime.getFullYear();
+
+    var time = hours + ":" + minutes + ":" + seconds;
+
+    document.getElementById("Clock").innerHTML =
+      months + "-" + day + "-" + year + " " + time;
+  }
+  displayTime();
+
+</script>
+</html>
